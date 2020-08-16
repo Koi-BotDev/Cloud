@@ -1,0 +1,15 @@
+package  com.company.Main;
+//importing jda
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.requests.GatewayIntent;
+import javax.security.auth.login.LoginException;
+
+public class Bot {
+    public static String prefix = "!";
+    public static void main(String[] args) throws LoginException {
+        JDABuilder jda = JDABuilder.create(GatewayIntent.GUILD_MESSAGES);
+        jda.setToken("NzQzNzk0NDA1ODA2MzA5NDI2.XzZ2hQ.TLbAgtNz4VbfARymfB0OQHcw7p8").build();
+              jda.addEventListeners(new Commands());
+
+    }
+}
