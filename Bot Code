@@ -8,7 +8,7 @@ public class Bot {
     public static String prefix = "!";
     public static void main(String[] args) throws LoginException {
         JDABuilder jda = JDABuilder.create(GatewayIntent.GUILD_MESSAGES);
-        jda.setToken("SECRET").build();
+        jda.setToken("BOT_TOKEN").build();
               jda.addEventListeners(new Commands());
               jda.addEventListener(new filter());
 
