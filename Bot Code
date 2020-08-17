@@ -10,6 +10,8 @@ public class Bot {
         JDABuilder jda = JDABuilder.create(GatewayIntent.GUILD_MESSAGES);
         jda.setToken("SECRET").build();
               jda.addEventListeners(new Commands());
+              jda.addEventListener(new filter());
+
 
     }
 }
